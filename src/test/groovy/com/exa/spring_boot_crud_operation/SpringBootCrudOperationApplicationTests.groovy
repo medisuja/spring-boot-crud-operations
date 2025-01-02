@@ -1,10 +1,10 @@
-package com.exa.spring_boot_crud_operations
+package com.exa.spring_boot_crud_operation
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class SpringBootCrudOperationsApplicationTests {
+class SpringBootCrudOperationApplicationTests {
 
 	@Test
 	void contextLoads() {
