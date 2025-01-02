@@ -1,13 +1,13 @@
-package com.exa.spring_boot_crud_operations
+package com.exa.spring_boot_crud_operation
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
-class SpringBootCrudOperationsApplication {
+class SpringBootCrudOperationApplication {
 
 	static void main(String[] args) {
-		SpringApplication.run(SpringBootCrudOperationsApplication, args)
+		SpringApplication.run(SpringBootCrudOperationApplication, args)
 	}
 
 }
