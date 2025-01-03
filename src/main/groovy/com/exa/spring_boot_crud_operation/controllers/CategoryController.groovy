@@ -33,7 +33,8 @@ class CategoryController {
         if (category) {
             return category
         } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND)
+            def response = [message: "Category not found"]
+            return new ResponseEntity<>(response, HttpStatus.NOT_FOUND)
         }
     }
 
@@ -49,7 +50,8 @@ class CategoryController {
         if (existingCategory) {
             return existingCategory
         } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND)
+            def response = [message: "Category not found"]
+            return new ResponseEntity<>(response, HttpStatus.NOT_FOUND)
         }
     }
 
@@ -60,7 +62,8 @@ class CategoryController {
         if (deletedCategory) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT)
         } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND)
+            def response = [message: "Category not found"]
+            return new ResponseEntity<>(response, HttpStatus.NOT_FOUND)
         }
     }
 }

@@ -5,19 +5,24 @@ import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
-import jakarta.persistence.OneToMany
+import jakarta.persistence.JoinColumn
+import jakarta.persistence.ManyToOne
 import jakarta.persistence.Table
 
 @Entity
-@Table(name = "categories")
-class Category {
+@Table(name = "books")
+class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id
 
-    @Column(nullable = false, length = 80)
+    @ManyToOne
+    @JoinColumn(name="category_id", nullable = false)
+    Category category
+
+    @Column(nullable = false, length = 150)
     String name
 
-    @OneToMany(mappedBy = "category")
-    private List<Book> books
+    @Column(nullable = true, length = 20)
+    String isbn
 }
